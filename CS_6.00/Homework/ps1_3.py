@@ -26,12 +26,12 @@ min_bound=balance*annual_interest/12.0
 max_bound=(balance*(1+annual_interest/12.0)**12.0)/12.0
 prev=0
 
-while(true):
+while(True):
 
-    ave=(min_bound+max_bound)/2
+    ave=round((min_bound+max_bound)/2, 2)
     test=ave
     if(prev==test):
-	break
+        break
 
 
     if(oneYear(balance, test, annual_interest)>=0):
@@ -39,7 +39,7 @@ while(true):
         
     elif(oneYear(balance, test, annual_interest)<=oneYear(balance, test-.01, annual_interest)):
         max_bound=test
-	prev=test
+        prev=test
            
     
 print max_bound
