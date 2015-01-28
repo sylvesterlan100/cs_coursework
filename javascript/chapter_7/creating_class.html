@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+
+
+		//Creating a constuctor(blue print)
+		function Vehicle(mycolor, myname, myterrain){
+			this.mycolor=mycolor;
+			this.myname=myname;
+			this.myterrain=myterrain;
+			var secret='secret';
+			this.tell=function(){console.log(secret);};
+			this.lol=function(){console.log('lol');};
+			this.test=function(){console.log('test');};
+		}
+
+		Vehicle.prototype.test=function(){console.log('test failed');};
+		Vehicle.prototype.hi=function(){console.log('hi');};
+		Vehicle.prototype.tellme=function(){console.log(secret)};
+	
+		var truck=new Vehicle('red', 'reed', 'sea');
+		truck.there='here';
+		//Extending previous constructor(blue print)
+		function Car(acolor, aname, aterrain, amake){
+			Vehicle.call(this, acolor, aname, aterrain);
+			this.mymake=amake;
+		}
+
+		Vehicle.prototype.newprop='new test';
+		Car.prototype.caronly='caronly';
+		//Creating instance of extending constructor (Car)
+		var honda=new Car('blue', 'bloo', 'land', 'honda');
+	
+		// function AVehicle(mycolor, myname, myterrain){
+		// 	this.mycolor=mycolor;
+		// 	this.myname=myname;
+		// 	this.myterrain=myterrain;
+		// }
+		
+
+		// ACar.prototype=AVehicle.prototype;
+
+		// var lol=new ACar('red', 'read', 'land');
+
+	</script>	
+
+
+
+</body>
+</html>
