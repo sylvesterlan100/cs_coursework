@@ -3,11 +3,24 @@
 	<title></title>
 
 	<script type="text/javascript">
-
+		var image_tracker='d'
+		function change(){
+			var img=document.getElementById('social');
+			if(image_tracker=='d')
+			{
+				img.src='assets/images/elephant.jpg';
+				image_tracker='e';
+			}
+			else
+			{
+				img.src='assets/images/duck.jpg';
+				image_tracker='d';
+			}
+		}
 
 	</script>
 </head>
 <body>
-	<img src='assets/images/duck.jpg'>
+	<img src='assets/images/duck.jpg' alt='social logo', id='social' onclick='change();'>
 </body>
 </html>
