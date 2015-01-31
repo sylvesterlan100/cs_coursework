@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function write_name(){
+			//var welcome_para=document.getElementById('welcome');
+			var name = document.getElementById('name');
+			alert(name.value);
+			//welcome_para.innerHTML='Welcome '+ name.value;
+		}
+	</script>
+</head>
+<body>
+	<p id='welcome'></p>
+
+	<form>
+		What is your name:
+		<input type='text' id='name' value='preset'><br>
+		<input type='button' value='Done' onclick='write_name();'/>
+	</form>
+
+</body>
+</html>

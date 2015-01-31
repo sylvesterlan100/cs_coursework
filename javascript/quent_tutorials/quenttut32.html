@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function is_checked(){
+			var sports = document.getElementById('sports').checked;
+			var electronics = document.getElementById('electronics').checked;
+			var tools = document.getElementById('tools').checked;
+			if(sports||electronics||tools){
+				return true;
+			}
+			else{
+				alert('Please check a category!');
+				return false;
+
+			}
+		}
+	</script>	
+</head>
+<body>
+	<form action='quenttut30a.html' method='get' onsubmit='return is_checked()'>
+
+		<p>Please select a category:</p>
+		
+		Sports <input type='checkbox' name='interests' value='sports' id='sports'>
+		
+		Electronics <input type='checkbox' name='interests' value='electronics' id='electronics'>
+		
+		Tools <input type='checkbox' name='interests' value='tools' id='tools'>
+
+		<input type='submit' value='submit'>
+
+	</form>
+
+</body>
+</html>

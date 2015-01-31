@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function check(){
+			var yes_checked=document.getElementById('auto_renew').checked;
+			var no_checked=document.getElementById('auto_renew_no').checked;
+			if(yes_checked||no_checked)
+				return true;
+			else{
+				alert('Please select yes or no!');
+				return false;
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action='quenttut30a.html' method='get' onsubmit='return check()'>
+		<p>Renew your membership?</p>
+		Yes <input type='radio' name='auto_renew' value='yes' id='auto_renew'><br>
+		No <input type='radio' name='auto_renew' value='no' id='auto_renew_no'><br>
+		<input type='submit' value='submit'>
+		
+
+	</form>
+
+</body>
+</html>
