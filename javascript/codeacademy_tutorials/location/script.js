@@ -4,6 +4,8 @@ function show(msg){
 	para.innerHTML+='<p>'+msg+'</p>';
 }
 
+//Location methods
+
 show('protocol: '+window.location.protocol);
 show('hostname: '+window.location.hostname);
 show('port: '+window.location.port);

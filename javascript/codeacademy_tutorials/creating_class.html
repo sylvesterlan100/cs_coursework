@@ -17,7 +17,7 @@
 			this.lol=function(){console.log('lol');};
 			this.test=function(){console.log('test');};
 		}
-
+		//Modifying the vehicle prototype
 		Vehicle.prototype.test=function(){console.log('test failed');};
 		Vehicle.prototype.hi=function(){console.log('hi');};
 		Vehicle.prototype.tellme=function(){console.log(secret)};
@@ -29,12 +29,10 @@
 			Vehicle.call(this, acolor, aname, aterrain);
 			this.mymake=amake;
 		}
-
 		Vehicle.prototype.newprop='new test';
 		Car.prototype.caronly='caronly';
 		//Creating instance of extending constructor (Car)
 		var honda=new Car('blue', 'bloo', 'land', 'honda');
-	
 		// function AVehicle(mycolor, myname, myterrain){
 		// 	this.mycolor=mycolor;
 		// 	this.myname=myname;
@@ -45,10 +43,6 @@
 		// ACar.prototype=AVehicle.prototype;
 
 		// var lol=new ACar('red', 'read', 'land');
-
 	</script>	
-
-
-
 </body>
 </html>
