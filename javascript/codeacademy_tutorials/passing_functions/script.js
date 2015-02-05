@@ -1,12 +1,12 @@
 var element=document.getElementById('message');
 
-function recurse(arr){
+function recurse(arr, action){
 	if(arr.constructor!=Array)
-		element.innerHTML+="<p> Total: "+arr+"</p>";
+		action(arr);
 	else{
 		total=0;
 		for(var i in arr){
-			total+=recurse(arr[i]);
+			total+=recurse(arr[i], action);
 		}
 		return total;
 	}
