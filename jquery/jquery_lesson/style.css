@@ -1,0 +1,23 @@
+#div0{
+	height: 300px;
+	width: 200px;
+	background-color: blue;
+	display: inline-block;
+}
+
+#div1{
+	height: 300px;
+	width: 200px;
+	background-color: red;
+	display: inline-block;
+}
+
+#div2{
+	height: 200px;
+	width: 100px;
+	background-color: green;
+	
+}
+p{
+	display: inline-block;
+}
