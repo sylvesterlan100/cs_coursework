@@ -1,0 +1,42 @@
+/* Make Each Section Unique by Font Color*/
+
+#head1{
+	color: red;
+}
+#head2{
+	color: green;
+}
+#div1{
+	color: blue;
+}
+#div2{
+	color: purple;
+}
+#p1{
+	color: olive;
+}	
+#p2{
+	color: orange;
+}
+#ul1{
+	color: black;
+}
+#li1{
+	color: cyan;
+}
+#li2{
+	color: gray;
+}
+#li3{
+	color: brown;
+}
+#message{
+	min-height: 20px;
+	min-width: 150px;
+	border: 1px solid black;
+	padding: 3px;
+	padding-left: 10px;
+	display: inline-block;
+}
+
+

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!--Setting up a document with various elements to traverse through-->
+	<h1 id='head1' class='h'>My first header</h1>
+	<h2 id='head2' class='h'>My second header</h2>
+	<div id='div1' clas='d'>My first div
+		<p id='p1' class='p'>My first p
+			<article id='article1'>
+			</article>
+
+		</p>
+
+		<p id='p2' class='p'>My second p
+		</p>
+	</div>
+	<div id='div2' class='d'> My second div
+		<ul id='ul1' class='u'>
+			<li id='li1' class='l'>My first li</li>
+			<li id='li2' class='l'>My second li</li>
+			<li id='li3' class='l'>My third li</li>
+		</ul>
+	</div>
+
+	<div id='message'></div>
+	<script type="text/javascript" src='script.js'></script>
+	<script type="text/javascript">
+	//Start and end
+		var start = $('#ul1');
+		var end = start.children[0].parentElement
+	//Display message to final point
+		write(end, "I have arrived here!")
+		display('my ID = '+end.id)
+		display('my ID = '+end)
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1 id='head1' class='h'>My first header</h1>
+	<h2 id='head2' class='h'>My second header</h2>
+	<div id='div1' clas='d'>My first div
+		<p id='p1' class='p'>My first p
+			<article id='article1'>
+			</article>
+
+		</p>
+
+		<p id='p2' class='p'>My second p
+		</p>
+	</div>
+	<!--
+	<div id='div2' class='d'> My second div
+		<ul id='ul1' class='u'>
+			<li id='li1' class='l'>My first li</li>
+			<li id='li2' class='l'>My second li</li>
+			<li id='li3' class='l'>My third li</li>
+		</ul>
+	</div>
+	-->
+	<div id='message'></div>
+	<script type="text/javascript" src='script.js'></script>
+	<script type="text/javascript">
+		var start = $('#p1');
+		//Directly generating and adding nodes
+		//var added = start.appendChild(document.createElement('p'))
+		//added.appendChild(document.createTextNode('Check me out baby'));
+		//start.appendChild(document.createElement('strong')).appendChild(document.createTextNode('OMG THIS ROCKS'));
+
+		//Fragment method
+
+		var f=document.createDocumentFragment();
+		var d1=f.appendChild(document.createElement('div'));
+		d1.id='div2';
+		d1.className='d'
+		d1.appendChild(document.createTextNode('My second div'));
+
+		var u1= d1.appendChild(document.createElement('ul'));
+		u1.id='ul1';
+		u1.className='u';
+
+		for(var i=1; i<=3; i++){
+			var l= u1.appendChild(document.createElement('li'));
+			l.id='li'+i;
+			l.className='l';
+		}
+
+		$('#div1').appendChild(d1);
+
+	</script>
+</body>
+</html>
