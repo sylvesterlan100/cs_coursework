@@ -21,7 +21,7 @@ Lib.Output=(function(){
 		element.innerHTML="";
 	}
 	function FormatMessage(msg){
-
+		return '<p style= "color:'+color+'"><strong>'+msg+'</strong></p>'
 	}
 	//Public functions attached to the 'output' section of the library
 	return{
