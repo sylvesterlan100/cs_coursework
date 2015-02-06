@@ -35,7 +35,7 @@
 		//start.appendChild(document.createElement('strong')).appendChild(document.createTextNode('OMG THIS ROCKS'));
 
 		//Fragment method
-
+		//Generating the commented out div (#div2)
 		var f=document.createDocumentFragment();
 		var d1=f.appendChild(document.createElement('div'));
 		d1.id='div2';
@@ -50,9 +50,15 @@
 			var l= u1.appendChild(document.createElement('li'));
 			l.id='li'+i;
 			l.className='l';
+			l.appendChild(document.createTextNode('This is my li number '+i))
 		}
 
-		$('#div1').appendChild(d1);
+		$('body')[0].insertBefore(d1, $('#message'));
+		//Cloning an element
+		var r = d1.cloneNode(false);
+		r.id='div3' 
+		r.appendChild(document.createTextNode('Fine'))
+		$('body')[0].appendChild(r);
 
 	</script>
 </body>

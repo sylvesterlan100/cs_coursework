@@ -27,7 +27,12 @@
 	<div id='message'></div>
 	<script type="text/javascript" src='script.js'></script>
 	<script type="text/javascript">
-		
+		//$('#div1').parentNode.removeChild($('#div1'));
+		var ul = $('#ul1')
+
+		while(ul.children.length>0){
+			ul.removeChild(ul.children[0]);
+		}
 
 
 	</script>
