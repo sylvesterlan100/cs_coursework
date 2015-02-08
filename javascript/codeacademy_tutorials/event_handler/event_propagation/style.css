@@ -1,0 +1,32 @@
+table{
+	border: 1px solid black;
+}
+
+th{
+	border: 1px solid black;
+	background-color: gray;
+	padding: 10px;
+}
+
+td{
+	
+	padding: 10px;
+}
+
+#test{
+	visibility: hidden;
+	
+}
+
+td:hover{
+	background-color: yellow;
+	color: red;
+}
+
+col.active{
+	background-color: yellow;
+}
+
+tr.active td{
+	background-color: yellow;
+}

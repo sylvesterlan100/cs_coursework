@@ -14,8 +14,9 @@ function cancel(){
 	return false;
 }
 
-function cool(){
+function cool(e){
 	alert('wow!');
+	alert(e.currentTarget);
 }
 
 

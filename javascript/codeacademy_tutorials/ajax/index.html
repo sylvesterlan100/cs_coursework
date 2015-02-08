@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ahWkXZpGgQI?list=PLH_VDDyuKbKUgQXaucbcBkIndqzXuu6g1" frameborder="0" allowfullscreen></iframe>
+
+	<form id='speedform' action='http://localhost:8000/speedconvert.php' method='get'>
+		<fieldset>
+			<legend>Speed conversion</legend>
+			<label for='speed'>Speed:</label>
+			<input type='text' id='speed' name='speed' value='0' />
+
+			<select type='text' id='unit' name='unit'>
+				<option value = 'mph'>Miles per hour:</option>
+				<option value = 'kph'>Kilometers per hour:</option>
+				<option value = 'fps'>Feet per second:</option>
+				<option value = 'mps'>Meters per second:</option>
+			</select>
+			<input type='hidden' name='format' value='html' />
+			<button type='submit'>Convert</button>
+		</fieldset>
+	</form>
+	<div id='output'>
+		<table>
+			<tr> <th>mph </th>  <td>0.00</td> </tr>
+			<tr> <th>kph </th>  <td>0.00</td> </tr>
+			<tr> <th>fps </th>  <td>0.00</td> </tr>
+			<tr> <th>mps </th>  <td>0.00</td> </tr>
+		</table>
+	</div>
+	<script type="text/javascript" src='script.js'></script>
+</body>
+</html>

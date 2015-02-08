@@ -1,0 +1,16 @@
+<html ng-app='app'>
+<head>
+	<title></title>
+</head>
+<body>
+	<div ng-controller='MainController'>
+		<button ng-click='inc()'>Get this</button>
+		{{val}}
+		<h2 ng-show='even'>Even</h2>
+		<h2 ng-hide='even'>Odd</h2>
+	</div>
+
+	<script type="text/javascript" src='../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+</body>
+</html>
