@@ -1,0 +1,21 @@
+<html ng-app='app'>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div ng-controller='MainController'>
+
+		<h1 ng-class="[myVar, 'italic']">Hello there</h1>
+
+		<h1 ng-class='{orange: myTest}'>Second Attempt</h1>
+
+		<h1 ng-class='{italic: myTest2}'>Third try</h1>
+
+		<h1 ng-class="'orange italic'">Final try</h1>
+
+	</div>
+	<script type="text/javascript" src='../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+</body>
+</html>

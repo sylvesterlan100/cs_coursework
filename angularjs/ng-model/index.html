@@ -1,0 +1,28 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div ng-controller='MainController'>
+		<input ng-model='mydata.val'>
+	 	<h1>{{mydata.val}}</h1>
+	 	{{check1}}
+	 	{{hisdata.val}}
+	 <!-- 	<span ng-show='mydata.toolong'>Too long man!</span> -->
+	 <hr>
+	</div>
+ 
+	<div ng-controller='SecondController'>
+		<p>Num: {{num}}</p>
+		<p>Nums: {{nums}}</p>
+		<button ng-click='increment()'>Increment</button>
+		<button ng-click='breakit()'>Break</button>
+
+	</div> 
+
+	
+	<script type="text/javascript" src='../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+</body>
+</html>

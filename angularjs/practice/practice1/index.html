@@ -1,0 +1,33 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div ng-controller='FirstController'>
+		<div ng-repeat='element in arr'>
+			<div ng-class='element'>
+				Rainbow
+			</div>
+			<br>
+		</div>
+	</div>
+	<div ng-controller='SecondController'>
+		<button ng-click='test()'>Test</button>
+		<h1 ng-show='myVar'>HOLY COW</h1>
+		<h1 ng-hide='myVar'>UNHOLY CHICKEN: <span ng-include="'sound1.html'"></span></h1>
+
+	</div>
+
+	<script type="text/ng-template" id='sound.html'>
+		<p>Bawk Bawk</p>
+	</script>
+
+	<script type="text/ng-template" id='sound1.html'>
+		<p>Baby</p>
+	</script>
+
+	<script type="text/javascript" src='../../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+</body>
+</html>
