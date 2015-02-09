@@ -1,0 +1,30 @@
+<!--
+myDirective: can be written as 4 forms when defined in Angular
+
+1. <my-directive></my-directive>
+
+2. <div my-directive></div>
+
+3. <div class='my-directive'></div>
+
+4. my-directive (commented)
+
+Example of use: 
+<inventory-list item-detail pop-out is-selected='true' />
+-->
+
+
+<html ng-app='myApp'>
+<head>
+	<title></title>
+
+</head>
+<body>
+	<div ng-controller='MainController'>
+		<photo photo-src="{{photo.url}}" caption='Taken on: {{photo.date}}' />
+		
+	</div>
+	<script type="text/javascript" src='../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+</body>
+</html>
