@@ -1,0 +1,24 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div ng-controller='MainController'>
+		<input ng-model='myfilter.name'>
+		{{myfilter.str | date}}
+		<hr>
+		<div ng-repeat='user in mydata.arr | filter:myfilter.name'>
+				{{user}}
+		</div>
+		<hr>
+
+		<div ng-repeat="user in mydata.obj | filter:myfilter | orderBy:'age' | limitTo: -2">
+				{{user}}
+		</div>
+	</div>
+
+	<script type="text/javascript" src='../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+</body>
+</html>
