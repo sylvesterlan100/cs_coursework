@@ -1,0 +1,11 @@
+1. Set up links and script links
+	- angular
+	- style.css
+	- app.js
+
+2. Set up angular infrastructure
+	- ng-app
+	- ng-controller
+
+3. Connect to firebase
+

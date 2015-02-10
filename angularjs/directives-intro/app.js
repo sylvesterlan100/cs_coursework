@@ -5,10 +5,12 @@ app.controller('MainController', ['$scope', function($scope){
 		url: 'duck.jpg',
 		date: 'Jan 1, 2014'
 	};
+	$scope.tester={
+		message: 'Hi This is my Test message!'
+	}
 }]);
 
-/*
-app.directive('photo', function(){
+/*app.directive('photo', function(){
 	return {
 		//Element directive: a tag
 		restrict: 'E',
@@ -25,20 +27,28 @@ app.directive('photo', function(){
 			})
 		}
 	}
-})
-*/
-
+})*/
 
 //Better way
 app.directive('photo', function(){
-	return {
+	return{
 		restrict: 'E',
-		template: '<figure>'+'<img width="500px" ng-src="{{photoSrc}}" />'+'<figcaption>{{caption}}</figcaption>'+'</figure>',
-		replace: true,
+		template: '<figure><img width="500px" ng-src="{{photoSrc}}" /><figcaption>{{caption}}</figcaption></figure>',
+		replace: false,
 		scope:{
 			caption: '@',
 			photoSrc: '@'
 		}
+	}
+})
 
+app.directive('tester', function(){
+	return{
+		restrict: 'E',
+		template: '</h1>This is a test. {{message}}<h1>',
+		replace: false,
+		scope:{
+			message: '@'
+		}
 	}
 })
