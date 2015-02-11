@@ -3,9 +3,12 @@
 	<title></title>
 </head>
 <body>
+	<!-- ng-app creates scope ($rootscope) -->
 	<h1>Hello, world!</h1>
 	<p> {{'string'}}</p>
 	<p>{{12+23}}</p>
+
+	<!-- separate controllers create independent scopes -->
 	<div ng-controller="MainController">
 		{{val}}
 		<br>

@@ -22,7 +22,7 @@ app.filter('charlimit', function(){
 })
 
 app.filter('candrink', function(){
-	return function(data, minage){
+	return function(data, minage, age){
 		var filtered=[];
 		if(!minage){
 			minage=21;
@@ -30,6 +30,7 @@ app.filter('candrink', function(){
 		for(var i=0; i<data.length;i++){
 			var value=data[i];
 			if(value.age>=minage){
+				value.name=age||value.name;
 				filtered.push(value)
 			}
 		}
