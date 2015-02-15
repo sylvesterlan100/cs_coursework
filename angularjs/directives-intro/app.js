@@ -32,6 +32,7 @@ app.controller('MainController', ['$scope', function($scope){
 //Better way
 app.directive('photo', function(){
 	return{
+		//element directive: a tag
 		restrict: 'E',
 		template: '<figure><img width="500px" ng-src="{{photoSrc}}" /><figcaption>{{caption}}</figcaption></figure>',
 		replace: false,
