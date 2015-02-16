@@ -5,9 +5,7 @@ app.controller('MainController', ['$scope', function($scope){
 		url: 'duck.jpg',
 		date: 'Jan 1, 2014'
 	};
-	$scope.tester={
-		message: 'Hi This is my Test message!'
-	}
+	
 }]);
 
 /*app.directive('photo', function(){
