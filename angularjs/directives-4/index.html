@@ -1,0 +1,18 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+	<script type="text/javascript" src='app.js'></script>
+</head>
+<body ng-controller='MainController'>
+
+	Msg 1: <input ng-model='myMsg'>
+	Msg 2: <input ng-model='myMsg2'>
+	<button ng-click='call("test")'>Call outside</button>
+	<hr>
+	
+	<check rofl='{{myMsg}}' lol='myMsg2' func='call(msg, mess)'></check>	
+
+</body>
+</html>
