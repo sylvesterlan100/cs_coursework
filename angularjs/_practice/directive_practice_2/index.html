@@ -1,0 +1,14 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+	<script type="text/javascript" src='app.js'></script>
+</head>
+<body ng-controller='MainController'>
+ 	<p>color: <input ng-model='myColor'></p>
+ 	<p>text: <input ng-model='awesome'> </p>
+ 	<span>spanned</span>
+	<check msg='{{awesome}}' color='{{myColor}}'></check>
+
+</body>
+</html>
