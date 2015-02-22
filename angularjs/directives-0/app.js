@@ -8,6 +8,7 @@ app.controller('MainController', ['$scope', function($scope){
 	
 }]);
 
+//Jquery-ish way of detecting attributes of the element with the directive
 /*app.directive('photo', function(){
 	return {
 		//Element directive: a tag
@@ -30,10 +31,14 @@ app.controller('MainController', ['$scope', function($scope){
 //Better way
 app.directive('photo', function(){
 	return{
-		//element directive: a tag
+		//element directive; can also be attribute, class or comment (ACM)
 		restrict: 'E',
+
+		//template which takes place or is inserted between the element with this directive
 		template: '<figure><img width="500px" ng-src="{{photoSrc}}" /><figcaption>{{caption}}</figcaption></figure>',
 		replace: false,
+
+		//isolate scope which imports data from outside source
 		scope:{
 			caption: '@',
 			photoSrc: '@'

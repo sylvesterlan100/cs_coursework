@@ -5,6 +5,8 @@
 </head>
 <body>
 	<div ng-controller='FirstController'>
+		
+		
 		<div ng-repeat='element in arr'>
 			<div ng-class='element'>
 				Rainbow
@@ -13,12 +15,17 @@
 		</div>
 	</div>
 	<div ng-controller='SecondController'>
+
+		<!-- button toggles myVar which affects visibility of the next two h1's -->
 		<button ng-click='test()'>Test</button>
+
 		<h1 ng-show='myVar'>HOLY COW</h1>
+		<!-- ng-include for including templates -->
 		<h1 ng-hide='myVar'>UNHOLY CHICKEN: <span ng-include="'sound1.html'"></span></h1>
 
 	</div>
 
+	<!-- Different templates -->
 	<script type="text/ng-template" id='sound.html'>
 		<p>Bawk Bawk</p>
 	</script>

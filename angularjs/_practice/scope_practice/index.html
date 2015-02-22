@@ -4,11 +4,15 @@
 </head>
 <body>
 	<div ng-controller='FirstController'>
-			<!-- <input ng-model='mydata.val'> -->
+			<input ng-model='mydata.val'>
 			value:  {{mydata.val}}
 
 		<div ng-controller='SecondController'>
 			<input ng-model='mydata.val'>
+			
+			<!-- if inner mydata was created first, it will be separate from mydata created outside -->
+
+			<!-- if outer mydata already exists, the inner mydata will only update the one created outside -->
 			value: {{mydata.val}}
 		</div>
 	

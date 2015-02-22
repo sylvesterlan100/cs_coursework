@@ -7,6 +7,10 @@ app.controller('MainController', function($scope){
 		test=true;
 		$scope.test1=1;
 	}
+
+	//Every time one updates, the other will update
+	//Creates an infinite loop if not stopped by the program
+
 	$scope.$watch('test1', function(){
 		if(test)
 			$scope.test2=$scope.test1+1;
@@ -15,4 +19,6 @@ app.controller('MainController', function($scope){
 		if(test)
 			$scope.test1=$scope.test2+1;
 	});
+
+	//ends at 22, 23
 });
