@@ -1,9 +1,8 @@
 var app=angular.module('myApp', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise('/state');
 	$stateProvider
-		.state('home', {
+	.state('home', {
 			url: '',
 			views:{
 				"viewA": {templateUrl:'templates/test1.html'},
@@ -25,10 +24,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 				"viewA": {templateUrl:'templates/home.html'},
 				"viewB": {templateUrl: 'templates/test3.html'}
 			}
+		
 		})
 
-})
 
+});
 app.controller('MainController', function(){
 
 })
