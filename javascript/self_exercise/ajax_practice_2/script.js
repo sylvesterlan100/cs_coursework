@@ -1,11 +1,11 @@
+//Get Element By ID
 userInput=document.getElementById('person');
 suggestion=document.getElementById('suggestions');
 
+
 function getHint(){
-	
 	if(userInput.value==""){
 		suggestion.innerHTML='';
-
 	}
 	else
 	{

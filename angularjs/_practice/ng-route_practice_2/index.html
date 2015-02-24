@@ -1,0 +1,22 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular-route.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+
+</head>
+<body ng-controller='MainController'>
+
+	<ng-view></ng-view>
+
+	<script type="text/ng-template" id='view.html'>
+		<div ng-controller='MainController'>This ORIGINAL view with data here: {{data}}</div>
+	</script>
+
+	<script type="text/ng-template" id='view2.html'>
+		<div ng-controller='MainController'>This another view with SAME data here: {{data}}</div>
+	</script>
+
+</body>
+</html>
