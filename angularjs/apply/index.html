@@ -1,8 +1,15 @@
 <html ng-app='myApp'>
 <head>
 	<title></title>
+	<script type="text/javascript" src='../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
 </head>
 <body ng-controller="MainController">
+	
+	<!-- Clicking this will trigger the digest loop -->
+	<button ng-click=''>Click to start a new digest loop!</button>
 
+	<!-- Modifying this input will trigger the digest loop -->
+	<input ng-model='someModel' />
 </body>
 </html>
