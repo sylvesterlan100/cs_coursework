@@ -1,0 +1,20 @@
+<html ng-app='myApp'>
+<head>
+	<title></title>
+	<script type="text/javascript" src='../angular.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+</head>
+<body ng-controller='MainController'>
+	<button ng-click='broadClick("Main")'>Main Broadcast</button>
+	<button ng-click='emitClick("Main")'>Main Emit</button>
+	<div ng-controller='MiddleController'>
+		<button ng-click='broadClick("Middle")'>Main Broadcast</button>
+		<button ng-click='emitClick("Middle")'>Main Emit</button>
+		<div ng-controller='BottomController'>
+			<button ng-click='broadClick("Bottom")'>Main Broadcast</button>
+			<button ng-click='emitClick("Bottom")'>Main Emit</button>
+		</div>
+	</div>
+
+</body>
+</html>
