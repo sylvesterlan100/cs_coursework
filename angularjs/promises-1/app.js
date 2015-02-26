@@ -10,6 +10,7 @@ app.controller("MainController", function($scope, $q, $timeout){
 	defer.promise
 
 		//..the 'then' activates
+		//val is passed from the defer.resolve
 		.then(function(val){
 			$scope.mydata=val
 		})
