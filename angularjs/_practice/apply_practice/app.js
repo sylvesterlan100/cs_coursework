@@ -12,13 +12,13 @@ app.controller('MainController', function($scope){
 
 	
 	myButton.addEventListener('click', function(){
+		
+		$scope.$apply(function(){
 		i++;
 		arr.push(i);
+		
 	})
 	
-	$scope.update=function(){
-		$scope.val='hi';
-	}
 
 
 })
