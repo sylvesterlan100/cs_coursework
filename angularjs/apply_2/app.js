@@ -1,9 +1,5 @@
 var app= angular.module('myApp', []);
 
-app.controller("MainController", function(){
-
-});
-
 app.directive('clickable', function(){
 	return {
 		restrict: 'E',
@@ -15,4 +11,13 @@ app.directive('clickable', function(){
 			})
 		}
 	}
-})
+});
+
+app.controller('MainController', function($scope){
+	$scope.foo=0;
+	$scope.val="";
+
+	$scope.update=function(){
+		$scope.val="garbage123";
+	};
+});
