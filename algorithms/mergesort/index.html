@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id='arr'></div>
+	<div id='sorted'></div>
+
+</body>
+	<script type="text/javascript">
+
+		arrDiv=document.getElementById('arr');
+		sortedDiv=document.getElementById('sorted');
+
+
+
+		var initArr=[3,5,12,7,44,22,1,2,52,45,32,7,1,23];
+		
+		function merge(firstArr, secondArr){
+			var first=firstArr.slice();
+			var second=secondArr.slice();
+			var arr=[];
+			while(first.length>0||second.length>0){
+				if(first.length==0){
+					arr=arr.concat(second);
+					second=[];
+
+				}
+				else if(second.length==0){
+					arr=arr.concat(first);
+					first=[];
+				}
+				else{
+					if(first[0]<=second[0]){
+						arr.push(first.shift());
+					}
+					else{
+						arr.push(second.shift());
+					}
+				}
+			}
+			return arr;
+		}
+
+		function mergeSort(arr){
+			if(arr.length==1||arr.length==0){
+				return arr;
+			}
+			else{
+				var n=arr.length;
+				var firstEnd = Math.ceil(n/2);
+				var secondBegin = firstEnd;
+
+				console.log(arr.slice(0, firstEnd));
+				console.log(arr.slice(secondBegin));
+
+				return merge(mergeSort(arr.slice(0, firstEnd)), mergeSort(arr.slice(secondBegin)));
+			}
+
+		}
+
+
+		arrDiv.innerHTML=initArr;
+		sortedDiv.innerHTML=mergeSort(initArr);
+
+	</script>
+</html>
