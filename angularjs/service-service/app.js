@@ -16,11 +16,10 @@ app.controller('MainController', function($scope, myService){
 // 	}
 // 	this.addData= addToString;
 // })
-
 // app.factory('myService', function(){
 // 	return new ServiceClass();
-
 // })
+
 app.service('myService', ServiceClass)
 
 function ServiceClass(){
